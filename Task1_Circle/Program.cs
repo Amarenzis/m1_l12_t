@@ -26,8 +26,6 @@ namespace Task1_Circle
                 Console.WriteLine("Введите значение y проверяемой точки");
                 double yPoint = Convert.ToDouble(Console.ReadLine());
 
-                //Можно удалить line 30-35, просто программа будет выдавать предупреждение и 0 длины/площади, а точка будет вне границ окружности. 
-                // Мне кажется не очень красиво.
                
                 // Выдаём результат
                 double lengthCircle = Circle.Length(radiusCircle);
@@ -44,6 +42,7 @@ namespace Task1_Circle
                 {
                     Console.WriteLine("Точка снаружи круга.", pointContains);
                 }
+                Console.WriteLine("Нажмите любую кнопку для выхода из программы.");
 
             }
             
