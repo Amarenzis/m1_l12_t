@@ -53,8 +53,8 @@ namespace Task1_Circle
             //Можно удалить 54-58, см.  line 29
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Радиус меньше нуля, программа не будет корректно работать.");
-                Console.WriteLine("Придётся её закрыть. Нажмите любую кнопку.");
+                Console.WriteLine("Значение радиуса не может быть отрицательным.");
+                Console.WriteLine("Придётся закрыть программу. Нажмите любую кнопку.");
             }
             catch (Exception except)
             {
