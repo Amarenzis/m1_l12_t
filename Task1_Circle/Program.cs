@@ -28,11 +28,7 @@ namespace Task1_Circle
 
                 //Можно удалить line 30-35, просто программа будет выдавать предупреждение и 0 длины/площади, а точка будет вне границ окружности. 
                 // Мне кажется не очень красиво.
-                if (radiusCircle < 0)
-                {
-                    throw new ArgumentOutOfRangeException();
-
-                }
+               
                 // Выдаём результат
                 double lengthCircle = Circle.Length(radiusCircle);
                 Console.WriteLine("Длина окружности {0:f2}.", lengthCircle);
@@ -50,10 +46,9 @@ namespace Task1_Circle
                 }
 
             }
-            //Можно удалить 54-58, см.  line 29
+            
             catch (ArgumentOutOfRangeException)
-            {
-                Console.WriteLine("Значение радиуса не может быть отрицательным.");
+            {                
                 Console.WriteLine("Придётся закрыть программу. Нажмите любую кнопку.");
             }
             catch (Exception except)
@@ -68,7 +63,7 @@ namespace Task1_Circle
 
     public static class Circle
     {
-        public static double radius;
+        private static double radius;
 
         public static double Radius
         {
@@ -81,6 +76,7 @@ namespace Task1_Circle
                 else
                 {
                     Console.WriteLine("Значение радиуса не может быть отрицательным.");
+                    throw new ArgumentOutOfRangeException();
                 }
             }
             get
